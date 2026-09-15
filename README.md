@@ -1,5 +1,4 @@
-# Multi-Expert Anatomy-Guided Negotiation (MEAG)
-## for Object Detection in Fetal Echocardiography
+# Multi-Expert Anatomy-Guided Negotiation (MEAG) for Object Detection in Fetal Echocardiography
 
 
 This repository provides the official project page for:
@@ -61,11 +60,4 @@ Yuyuan Bao, Camilla Fazi, Federica Fontanella, Netzahualcoyotl Hernandez-Cruz
 The source code will be released after the publication process is completed.
 
 
-## Citation
 
-```bibtex
-@inproceedings{bao2026meag,
-  title={Multi-Expert Anatomy-Guided Negotiation (MEAG) for Object Detection in Fetal Echocardiography},
-  author={Bao, Yuyuan and Fazi, Camilla and Fontanella, Federica and Hernandez-Cruz, Netzahualcoyotl},
-  year={2026}
-}
