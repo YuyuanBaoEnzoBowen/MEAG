@@ -1,32 +1,50 @@
-# Multi-Expert Anatomy-Guided Negotiation (MEAG) for Object Detection in Fetal Echocardiography
+# Multi-Expert Anatomy-Guided Negotiation (MEAG)
+## for Object Detection in Fetal Echocardiography
+
+
+This repository provides the official project page for:
+
+**Multi-Expert Anatomy-Guided Negotiation (MEAG) for Object Detection in Fetal Echocardiography**
 
 
 ## Overview
 
-This repository is the official project page for:
+Fetal echocardiographic object detection is challenging due to variations in cardiac structure size, low contrast, ambiguous boundaries, and dense spatial overlap.
 
-**"Multi-Expert Anatomy-Guided Negotiation (MEAG) for Object Detection in Fetal Echocardiography"**
+We propose Multi-Expert Anatomy-Guided Negotiation (MEAG), an object-detection framework that separates candidate generation from candidate selection.
 
-MEAG is an anatomy-guided object detection framework designed for fetal echocardiographic structure detection. It addresses challenges caused by small structures, weak visual evidence, ambiguous boundaries, and dense spatial overlap in fetal cardiac ultrasound images.
+MEAG combines complementary candidates with anatomy-guided arbitration to improve detection of fetal cardiac structures, particularly those with weak visual evidence.
 
 
 ## Method
 
-MEAG separates candidate generation from candidate selection through a multi-expert negotiation framework.
+MEAG consists of four main components:
 
-The framework consists of four components:
+- **Dual-expert Candidate Generation**
 
-- **Dual-Expert Candidate Generation (DE-CGM)**  
-  Generates complementary oriented bounding-box candidates using stable and detail proposal experts.
+  Combines the original YOLO26m-OBB prediction path with an additional detail path to generate complementary oriented bounding-box candidates.
 
-- **Anatomical Policy Distillation (APD)**  
-  Converts anatomical reasoning into supervision signals for candidate ranking.
+- **Anatomical Policy Distillation**
 
-- **Learned Anatomical Arbitration (LAA)**  
-  Learns to select better candidates using detector confidence, rotated geometry, and anatomical relations.
+  Uses teacher decisions and training annotations to provide supervision for candidate ranking.
 
-- **Evidence-aware Safeguard**  
-  Maintains conservative decisions when anatomical evidence is insufficient.
+- **Learned Anatomical Arbitration**
+
+  Learns to rank competing candidates using detector confidence, rotated geometry, and anatomical relations.
+
+- **Evidence-aware Safeguard**
+
+  Retains the detector-confidence candidate when replacement evidence is insufficient.
+
+
+## Results
+
+MEAG was evaluated on 300 four-chamber fetal echocardiograms with 15 annotated classes.
+
+Compared with YOLO26m-OBB, MEAG achieved:
+
+- mAP50 improvement from 0.704 to 0.750
+- Weak-structure mAP50 improvement from 0.449 to 0.539
 
 
 ## Paper
@@ -38,36 +56,16 @@ Authors:
 Yuyuan Bao, Camilla Fazi, Federica Fontanella, Netzahualcoyotl Hernandez-Cruz
 
 
-Conference:
-
-IEEE International Conference on Biomedical Engineering and Systems (IBIOMED) 2026
-
-
-## Results
-
-MEAG was evaluated on fetal echocardiography object detection.
-
-Compared with YOLO26m-OBB:
-
-- mAP50 improved from 0.704 to 0.750
-- Weak-structure mAP50 improved from 0.449 to 0.539
-
-The results demonstrate improved detection performance, particularly for challenging anatomical structures.
-
-
 ## Code Availability
 
-The source code and pretrained models will be released after the publication process is completed.
+The source code will be released after the publication process is completed.
 
 
 ## Citation
-
-If you find this work useful, please cite:
 
 ```bibtex
 @inproceedings{bao2026meag,
   title={Multi-Expert Anatomy-Guided Negotiation (MEAG) for Object Detection in Fetal Echocardiography},
   author={Bao, Yuyuan and Fazi, Camilla and Fontanella, Federica and Hernandez-Cruz, Netzahualcoyotl},
-  booktitle={IEEE International Conference on Biomedical Engineering and Systems},
   year={2026}
 }
