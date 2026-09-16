@@ -1,10 +1,8 @@
 # Multi-Expert Anatomy-Guided Negotiation (MEAG) for Object Detection in Fetal Echocardiography
 
+Official project page for MEAG.
 
-This repository provides the official project page for:
-
-**Multi-Expert Anatomy-Guided Negotiation (MEAG) for Object Detection in Fetal Echocardiography**
-
+**Accepted at the 2026 6th International Conference on Biomedical Engineering (IBIOMED 2026).**
 
 ## Overview
 
