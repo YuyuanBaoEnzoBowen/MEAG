@@ -38,12 +38,12 @@ MEAG consists of four main components:
 
 ## Results
 
-MEAG was evaluated on 300 four-chamber fetal echocardiograms with 15 annotated classes.
+MEAG was evaluated on the FOCUS dataset, comprising 300 four-chamber fetal echocardiograms with 15 annotated classes.
 
-Compared with YOLO26m-OBB, MEAG achieved:
+Averaged over ten runs, MEAG achieved the following improvements over YOLO26m-OBB:
 
-- mAP50 improvement from 0.704 to 0.750
-- Weak-structure mAP50 improvement from 0.449 to 0.539
+- mAP50 increased from 0.702 to 0.748 (+6.6% relative).
+- W-mAP50, computed over six difficult structures, increased from 0.442 to 0.531 (+20.1% relative).
 
 
 ## Paper
